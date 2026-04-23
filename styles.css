@@ -475,25 +475,29 @@ footer {
     }
 
     nav a {
-        padding: 0.5rem 0.75rem;
-        font-size: 0.95rem;
+        padding: 0.45rem 0.65rem;
+        font-size: 0.9rem;
     }
 
     .hero-content {
         margin-left: 0;
         margin-top: 0;
-        padding: 1rem;
-        width: 90%;
+        padding: 0.9rem;
+        width: 88%;
     }
 
     .hero-content h2 {
-        font-size: 1.6rem;
-        line-height: 1.2;
+        font-size: 1.45rem;
+        line-height: 1.25;
     }
 
     .animated-button {
-        font-size: 16px;
-        padding: 10px 20px;
+        font-size: 15px;
+        padding: 9px 18px;
+    }
+
+    .large-block {
+        padding: 1rem 0.75rem;
     }
 
     .large-block-container {
@@ -510,39 +514,48 @@ footer {
     }
 
     .large-block img {
-        height: 90px;
+        height: 80px;
     }
 
     .block h2 {
-        font-size: 1.2rem;
+        font-size: 1.15rem;
     }
 
     .block p {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
     }
 
     .about-container {
         flex-direction: column;
         text-align: center;
+        gap: 0.75rem;
     }
 
-    .about-image, .about-image2 {
+    .about-image,
+    .about-image2 {
         width: 100%;
         height: auto;
-        max-height: 300px;
+        max-height: 260px;
     }
 
-    .hero-content a {
-        display: inline-block;
+    .about-text {
+        padding: 0.5rem;
+        font-size: 0.95rem;
+        margin-bottom: 0;
     }
 
     .galerie-grid {
         grid-template-columns: 1fr;
-        gap: 1rem;
+        gap: 0.9rem;
     }
 
     .galerie-item img {
-        height: 220px;
+        height: 200px;
+    }
+
+    .galerie-item p {
+        font-size: 0.95rem;
+        margin-top: 0.5rem;
     }
 
     .produits-container {
@@ -554,12 +567,16 @@ footer {
         border-radius: 12px;
     }
 
+    .image-produit {
+        height: 180px;
+    }
+
     .info-produit {
-        padding: 1rem;
+        padding: 0.95rem;
     }
 
     .info-produit h3 {
-        font-size: 1rem;
+        font-size: 0.98rem;
     }
 
     .info-produit .description {
@@ -567,62 +584,64 @@ footer {
     }
 
     .info-produit .prix {
-        font-size: 1.1rem;
+        font-size: 1.05rem;
     }
 
     .btn-ajouter {
-        padding: 0.75rem 1.2rem;
-        font-size: 0.95rem;
+        padding: 0.7rem 1rem;
+        font-size: 0.9rem;
     }
 
     .h2 {
-        font-size: 1.9rem;
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
     }
 
     .contacts {
         grid-template-columns: 1fr;
+        gap: 0.8rem;
     }
 
     .contact-link {
-        padding: 0.85rem;
-        font-size: 0.95rem;
+        padding: 0.75rem;
+        font-size: 0.92rem;
     }
 
     form {
         max-width: 100%;
         margin: 1rem auto;
-        padding: 0 1rem;
+        padding: 0 0.8rem;
     }
 
     input,
     textarea {
-        padding: 0.85rem;
-        font-size: 0.95rem;
+        padding: 0.8rem;
+        font-size: 0.92rem;
     }
 
     button[type='submit'] {
-        padding: 0.85rem 1.5rem;
-        font-size: 0.95rem;
+        padding: 0.8rem 1.3rem;
+        font-size: 0.92rem;
     }
 
     .section-contact {
-        padding: 2rem 1rem;
+        padding: 1.8rem 1rem;
     }
 
     .contenu-panier {
-        padding: 1rem;
+        padding: 0.95rem;
         max-width: 95%;
     }
 
     .item-panier {
         flex-direction: column;
         text-align: center;
-        gap: 0.75rem;
+        gap: 0.65rem;
     }
 
     .item-panier img {
-        width: 50px;
-        height: 50px;
+        width: 48px;
+        height: 48px;
     }
 }
 
@@ -809,11 +828,86 @@ footer {
 
     .about-image,
     .about-image2 {
-        max-height: 220px;
+        max-height: 200px;
+    }
+
+    .about-text {
+        font-size: 0.88rem;
+        padding: 0.6rem 0.5rem 0.5rem;
+        line-height: 1.4;
+    }
+
+    .galerie-grid {
+        gap: 0.85rem;
+    }
+
+    .galerie-item img {
+        height: 150px;
+    }
+
+    .galerie-item p {
+        font-size: 0.85rem;
+    }
+
+    .h2 {
+        font-size: 1.35rem;
+        margin-bottom: 1.2rem;
+    }
+
+    #produits {
+        padding: 2.5rem 0.8rem;
+    }
+
+    .produits-container {
+        gap: 0.75rem;
+    }
+
+    .image-produit {
+        height: 160px;
+    }
+
+    .info-produit {
+        padding: 0.85rem;
+    }
+
+    .info-produit h3 {
+        font-size: 0.92rem;
+    }
+
+    .info-produit .prix {
+        font-size: 0.95rem;
+    }
+
+    .btn-ajouter {
+        padding: 0.6rem 0.95rem;
+        font-size: 0.82rem;
+    }
+
+    .section-contact {
+        padding: 1.2rem 0.5rem;
+    }
+
+    input,
+    textarea {
+        font-size: 0.85rem;
+        padding: 0.75rem;
+    }
+
+    .contact-link {
+        padding: 0.65rem;
+    }
+
+    .contenu-panier {
+        padding: 0.75rem;
+    }
+
+    .item-panier img {
+        width: 42px;
+        height: 42px;
     }
 
     #hero {
-        min-height: 60vh;
+        min-height: 55vh;
     }
 }
 
