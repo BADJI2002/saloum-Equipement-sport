@@ -651,8 +651,6 @@ footer {
     }
 
     .contacts {
-        flex-direction: column;
-        align-items: center;
         gap: 1rem;
     }
 
@@ -696,6 +694,14 @@ footer {
     .item-panier img {
         width: 48px;
         height: 48px;
+    }
+}
+
+@media (max-width: 420px) {
+    .contacts {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
     }
 }
 
@@ -996,31 +1002,37 @@ footer {
     background: #f5f5f5;
 }
 
-.produits-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 2rem auto;
+.produits-slider {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 1rem;
+}
+
+.produits-slider::-webkit-scrollbar {
+    display: none;
 }
 
 .carte-produit {
+    flex: 0 0 auto;
+    width: 160px;
+    scroll-snap-align: start;
     background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
     overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .carte-produit:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 }
 
 .image-produit {
     width: 100%;
-    height: 220px;
-    overflow: hidden;
+    height: 120px;
     background: #f0f0f0;
 }
 
@@ -1028,51 +1040,53 @@ footer {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s;
-}
-
-.carte-produit:hover .image-produit img {
-    transform: scale(1.05);
 }
 
 .info-produit {
-    padding: 1.5rem;
+    padding: 0.6rem;
     text-align: center;
 }
 
 .info-produit h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-    color: #333;
-}
-
-.info-produit .description {
-    font-size: 0.9rem;
-    color: #666;
-    margin-bottom: 1rem;
-    line-height: 1.4;
+    font-size: 0.85rem;
+    margin-bottom: 0.3rem;
 }
 
 .info-produit .prix {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     font-weight: bold;
     color: #3087eb;
-    margin-bottom: 1rem;
 }
 
-.btn-ajouter {
-    background: #3087eb;
-    color: #fff;
-    border: none;
-    padding: 0.8rem 1.5rem;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background 0.3s;
+/* Responsive pour le slider produits */
+@media (min-width: 768px) {
+    .carte-produit {
+        width: 200px;
+    }
+    .image-produit {
+        height: 150px;
+    }
+    .info-produit h3 {
+        font-size: 1rem;
+    }
+    .info-produit .prix {
+        font-size: 1.05rem;
+    }
 }
 
-.btn-ajouter:hover {
-    background: #ff0000;
+@media (min-width: 1200px) {
+    .carte-produit {
+        width: 240px;
+    }
+    .image-produit {
+        height: 180px;
+    }
+    .info-produit h3 {
+        font-size: 1.1rem;
+    }
+    .info-produit .prix {
+        font-size: 1.15rem;
+    }
 }
 
 /* Lightbox */

@@ -132,7 +132,7 @@ let panier = JSON.parse(localStorage.getItem('panier')) || [];
 
 // Afficher les produits
 function afficherProduits(categorie = 'tous') {
-    const container = document.querySelector('.produits-container');
+    const container = document.querySelector('.produits-slider');
     if (!container) return;
 
     let produitsFiltres = categorie === 'tous' 
