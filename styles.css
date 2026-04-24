@@ -111,131 +111,86 @@ nav li:hover ul {
 /* Hero */
 /* Section Hero */
 #hero {
+    position: relative;
     min-height: 100vh;
     background: url('photo/acceuil.png') no-repeat center center;
     background-size: cover;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: #ffffff;
+    color: #fff;
 }
 
-/* Contenu du Hero */
+/* Overlay dégradé sombre */
+#hero .overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3));
+    z-index: 1;
+}
+
+/* Contenu */
 .hero-content {
-    margin: 0;
-    padding: 1rem;
-    width: 90%;
+    position: relative;
+    z-index: 2;
     max-width: 800px;
+    padding: 1rem;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeSlideIn 1.2s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeSlideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .hero-content h1 {
     font-size: 2.5rem;
-    margin-bottom: 0.2rem;
-    font-style: inherit;
-}
-
-.hero-content a {
-    font-size: 3rem;
-    text-decoration: none;
-    font-style: inherit;
-    display: inline-block;
-    margin-top: 1rem;
-}
-
-/* Hero  button voi produit */
-
-/* From Uiverse.io by gharsh11032000 */
-.animated-button {
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    padding: 16px 36px;
-    border: 4px solid;
-    border-color: transparent;
-    font-size: 25px;
-    background-color: inherit;
-    border-radius: 100px;
-    font-weight: 600;
-    color: rgb(0, 4, 255);
-    box-shadow: 0 0 0 2px rgb(0, 26, 255);
-    cursor: pointer;
-    overflow: hidden;
-    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.animated-button svg {
-    position: absolute;
-    width: 24px;
-    fill: rgb(0, 4, 243);
-    z-index: 9;
-    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.animated-button .arr-1 {
-    right: 16px;
-}
-
-.animated-button .arr-2 {
-    left: -25%;
-}
-
-.animated-button .circle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 25px;
-    height: 20px;
-    background-color: rgb(0, 255, 136);
-    border-radius: 50%;
+    line-height: 1.3;
     opacity: 0;
-    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    animation: fadeInText 1.5s ease forwards;
+    animation-delay: 0.5s;
 }
 
-.animated-button .text {
-    position: relative;
-    z-index: 1;
-    transform: translateX(-12px);
-    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+@keyframes fadeInText {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
-.animated-button:hover {
-    box-shadow: 0 0 0 12px transparent;
-    color: #212121;
-    border-radius: 12px;
+.btn-hero {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.8rem 1.2rem;
+    background: #3087eb;
+    color: #fff;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background 0.3s;
+    opacity: 0;
+    animation: fadeInBtn 1.5s ease forwards, pulseBtn 2s infinite;
+    animation-delay: 0.8s;
 }
 
-.animated-button:hover .arr-1 {
-    right: -25%;
+@keyframes fadeInBtn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
 }
 
-.animated-button:hover .arr-2 {
-    left: 16px;
+@keyframes pulseBtn {
+    0% { transform: scale(1); box-shadow: 0 0 0 rgba(48,135,235,0.7); }
+    50% { transform: scale(1.05); box-shadow: 0 0 15px rgba(48,135,235,0.7); }
+    100% { transform: scale(1); box-shadow: 0 0 0 rgba(48,135,235,0.7); }
 }
 
-.animated-button:hover .text {
-    transform: translateX(12px);
+.btn-hero:hover {
+    background: #1a6fd6;
 }
-
-.animated-button:hover svg {
-    fill: #212121;
-}
-
-.animated-button:active {
-    scale: 0.95;
-    box-shadow: 0 0 0 4px rgb(0, 253, 105);
-}
-
-.animated-button:hover .circle {
-    width: 320px;
-    height: 220px;
-    opacity: 1;
-}
-
-/* Hero  button voi produit fin */
 
 /* section 2 les block */
 .large-block {
@@ -359,21 +314,18 @@ nav li:hover ul {
 .contacts {
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
-    margin: 2rem 0;
+    gap: 1.2rem;
+    margin: 1.5rem 0;
+    flex-wrap: nowrap;
 }
 
 .contact-link {
     font-size: 2rem;
     color: #fff;
     background: #3087eb;
-    padding: 0.8rem;
+    padding: 0.9rem;
     border-radius: 50%;
     transition: background 0.3s, transform 0.3s;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .contact-link:hover {
@@ -653,8 +605,6 @@ footer {
         margin-bottom: 2rem;
     }
 
-    .contacts {
-        gap: 1rem;
     }
 
     .contact-link {
