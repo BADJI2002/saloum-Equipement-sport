@@ -109,9 +109,11 @@ nav li:hover ul {
 }
 
 /* Hero */
+/* Section Hero */
 #hero {
-    height: 82vh;
-    background: url('photo/acceuil.png') no-repeat center center/cover;
+    min-height: 100vh;
+    background: url('photo/acceuil.png') no-repeat center center;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -120,11 +122,12 @@ nav li:hover ul {
     color: #ffffff;
 }
 
+/* Contenu du Hero */
 .hero-content {
     margin: 0;
     padding: 1rem;
     width: 90%;
-    text-align: center;
+    max-width: 800px;
 }
 
 .hero-content h1 {
@@ -702,6 +705,25 @@ footer {
         flex-direction: column;
         align-items: center;
         gap: 1rem;
+    }
+}
+
+/* Responsive Hero */
+@media (max-width: 768px) {
+    #hero {
+        min-height: 100vh;
+        background-size: contain;
+        background-position: center;
+    }
+
+    .hero-content {
+        width: 95%;
+        padding: 0.8rem;
+    }
+
+    .hero-content h1 {
+        font-size: 1.6rem;
+        line-height: 1.3;
     }
 }
 
