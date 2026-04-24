@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saloum Équipement Sport - Matériel Arts Martiaux</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
@@ -99,38 +100,47 @@
         <h2 class="h2">Nos Clients en Action</h2>
         <div class="galerie-grid">
             <div class="galerie-item">
-                <img src="photo/moietmc.jpeg" alt="Client 1">
+                <img src="photo/moietmc.jpeg" alt="Karate en kimono Saloum">
                 <p>Karate en kimono Saloum</p>
             </div>
             <div class="galerie-item">
-                <img src="photo/trophé1.jpeg" alt="Client 2">
+                <img src="photo/trophé1.jpeg" alt="Boxe avec protections">
                 <p>Boxe avec protections</p>
             </div>
             <div class="galerie-item">
-                <img src="photo/DACOSTA.jpeg" alt="Client 3">
+                <img src="photo/DACOSTA.jpeg" alt="Entraînement enfant">
                 <p>Entraînement enfant</p>
             </div>
             <div class="galerie-item">
-                <img src="photo/galsen.jpeg" alt="Client 4">
+                <img src="photo/galsen.jpeg" alt="Sac frappe pro">
                 <p>Sac frappe pro</p>
             </div>
             <div class="galerie-item">
-                <img src="photo/moietmc.jpeg" alt="Client 1">
+                <img src="photo/moietmc.jpeg" alt="Karate en kimono Saloum">
                 <p>Karate en kimono Saloum</p>
             </div>
             <div class="galerie-item">
-                <img src="photo/DACOSTA.jpeg" alt="Client 3">
+                <img src="photo/DACOSTA.jpeg" alt="Entraînement enfant">
                 <p>Entraînement enfant</p>
             </div>
         </div>
     </section>
 
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <span class="prev">&#10094;</span>
+        <span class="next">&#10095;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <p id="lightbox-caption"></p>
+    </div>
+
     <section id="a-propos">
-        <h2 class="h2">À Propos de Nous</h2>
         <div class="about-container">
-            <div class="about-container">
-                <img src="photo/karaté .PNG" alt="photo saloum02" class="about-image">
-                <p class="about-text">
+            <img src="photo/karaté .PNG" alt="À propos" class="about-image">
+            <div class="about-text">
+                <h2>À Propos de Nous</h2>
+                <p>
                     Saloum Équipement Sport est une entreprise dédiée à fournir des équipements de qualité pour les arts
                     martiaux. Nous sommes passionnés par les sports de combat et nous nous engageons à offrir les
                     meilleurs
@@ -148,19 +158,24 @@
                     en équipement.
                 </p>
             </div>
-            <img src="photo/SALOUM EQUIPEMENT.PNG" alt="photo saloum02" class="about-image2">
-
         </div>
     </section>
     <!-- Contact -->
     <section id="contact" class="section-contact">
         <h2 class="h2">Contactez-Nous</h2>
         <div class="contacts">
-            <a href="https://wa.me/221779783473" class="contact-link">📱 WhatsApp<br>+221 77 123 45 67</a>
-            <a href="https://instagram.com/saloum_equipment_sport" class="contact-link" target="_blank">📸
-                Instagram<br>@saloum_equipment_sport</a>
-            <a href="https://tiktok.com/@saloum_equipment_" class="contact-link" target="_blank">🎥 TikTok<br>@Saloum_equipment_Business</a>
-            <a href="https://wa.me/221779783473" class="contact-link">✉️ Message Direct<br>Commande rapide</a>
+            <a href="https://wa.me/221779783473" class="contact-link">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://instagram.com/saloum_equipment_sport" class="contact-link" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://tiktok.com/@saloum_equipment_" class="contact-link" target="_blank">
+                <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="https://wa.me/221779783473" class="contact-link">
+                <i class="fas fa-envelope"></i>
+            </a>
         </div>
         <form id="form-contact">
             <input type="text" name="nom" placeholder="Votre nom" required>
